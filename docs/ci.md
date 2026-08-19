@@ -28,7 +28,7 @@ The CI pipeline does this by:
 
 ## Blocking vs Advisory
 
-The CI pipeline splits the app linting and monitoring linting into two seperate steps.
+The CI pipeline splits the app linting and monitoring linting into two separate steps.
 
 - App kube-linter - Checks the application configuration files. This stage is enforced failing the workflow and blocking merges unless issues are remediated.
 - Monitoring kube-linter- Checks the monitoring configuration files. This stage is advisory and summarised, but does not block merge by itself.

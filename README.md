@@ -1,5 +1,18 @@
 # GitOps Platform
 
+[![CI](https://img.shields.io/github/actions/workflow/status/jamesoost/gitops-platform/gitops-pr-validation.yml?branch=main&style=for-the-badge&label=CI)](https://github.com/jamesoost/gitops-platform/actions/workflows/gitops-pr-validation.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
+
+[![Flux](https://img.shields.io/badge/GitOps-FluxCD-5468ff?style=for-the-badge)](https://fluxcd.io/)
+[![Kubernetes](https://img.shields.io/badge/Kubernetes-k3s-326ce5?style=for-the-badge&logo=kubernetes&logoColor=white)](https://kubernetes.io/)
+[![Helm](https://img.shields.io/badge/Helm-HelmRelease-0F1689?style=for-the-badge&logo=helm&logoColor=white)](https://helm.sh/)
+[![Vault](https://img.shields.io/badge/Secrets-Vault-ffec6e?style=for-the-badge&logo=vault&logoColor=black)](https://www.vaultproject.io/)
+[![Prometheus](https://img.shields.io/badge/Metrics-Prometheus-e6522c?style=for-the-badge&logo=prometheus&logoColor=white)](https://prometheus.io/)
+[![Loki](https://img.shields.io/badge/Logs-Loki-f5a623?style=for-the-badge)](https://grafana.com/oss/loki/)
+[![Grafana](https://img.shields.io/badge/Dashboards-Grafana-f46800?style=for-the-badge&logo=grafana&logoColor=white)](https://grafana.com/)
+[![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-4169e1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Dagster](https://img.shields.io/badge/Orchestration-Dagster-6a3ef2?style=for-the-badge)](https://dagster.io/)
+
 This repository implements a working Kubernetes GitOps platform using FluxCD. It brings together declarative application delivery, runtime secret management, and observability through a platform comprising Dagster, PostgreSQL, Vault, External Secrets, Prometheus, Loki, and Grafana. The implementation is intentionally scoped to a single-node local cluster while preserving production architectural patterns, with the design decisions and production considerations documented throughout the repository.
 
 ## What Is Implemented

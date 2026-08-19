@@ -1,14 +1,14 @@
 # Scaling
 
-This project is currently scoped as a local demo. To move this implementation to production, several scaling and reliability limitations would need to be address .
+This project is currently scoped as a local demo. To move this implementation to production, several scaling and reliability limitations would need to be addressed.
 
 ## Current State
- 
- The current state of this deployment have the following major limitations:
 
-- A Single-node cluster - No high availability or node-level failover.
-- A Single-replica Vault - Manual unseal required, creating a single point of failure.
-- A Local small retention model for metrics and logs - Minimal retention for metrics and logs, unsuitable for long-term auditing.
+The current state of this deployment has the following major limitations:
+
+- **Single-node cluster**: No high availability or node-level failover.
+- **Single-replica Vault**: Manual unseal required, creating a single point of failure.
+- **Small local retention model**: Minimal retention for metrics and logs, unsuitable for long-term auditing.
 
 ## Evolution Framework
 
@@ -35,7 +35,7 @@ To scale our GitOps delivery model, structure the repository layout and deployme
 
 - Maintain one reconciliation path per environment: Keep environment configurations isolated within the Git repository to prevent accidental cross-environment updates.
 - Isolate multi-cluster bootstraps: For multi-cluster expansion, map each new cluster to its own Git path and dedicated promotion strategy to avoid configuration drift.
--  Implement strict environment gates: Add automated checks, manual approvals, or pull-request gates before syncing changes to production.
+- Implement strict environment gates: Add automated checks, manual approvals, or pull-request gates before syncing changes to production.
 
 Reference entrypoints:
 - [clusters/dev/kustomization.yaml](../clusters/dev/kustomization.yaml)
@@ -110,7 +110,7 @@ To minimize risk and ensure a stable transition, execute the migration in the fo
 
 - Production Security, Reliability and Operational Overhead - Adding high availability, multi-cluster GitOps, and auto-unsealing Vault instances eliminates single points of failure but introduces ongoing platform maintenance costs.
     - Pros: Near-zero downtime, automated disaster recovery, robust security compliance, and a resilient platform that can scale to meet enterprise traffic.
-    - Cons: Increased infrastructure costs. Additionally as the platform grows futher improvements and automations will need to be implemented to manage the operators cognative load.
+    - Cons: Increased infrastructure costs. Additionally as the platform grows further, improvements and automations will need to be implemented to manage the operators' cognitive load.
 
 ## Next Reads
 
