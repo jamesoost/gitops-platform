@@ -4,7 +4,7 @@ This page explains what observability coverage exists today, why the stack is de
 
 ## Observability Goal
 
-The goal of the observability implementation provide enough visibility to answer three core questions:
+The observability goal is to provide enough visibility to answer three core questions:
 
 - Is the cluster healthy?
 - Are platform services available?
